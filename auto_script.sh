@@ -310,6 +310,8 @@ server {
     proxy_set_header Upgrade \$http_upgrade;
 
     proxy_set_header Connection "upgrade";
+	
+	client_max_body_size 5000M;
 
 
 
@@ -326,15 +328,6 @@ server {
             proxy_redirect off;
 
         }
-
-
-		location = /api/v1/videos/upload-resumable {
-		
-    		client_max_body_size    0;
-			
-		    proxy_request_buffering off;
-			
-  		}
 }
 nginx_content
 
