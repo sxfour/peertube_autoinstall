@@ -342,7 +342,7 @@ server {
         }
 		
 		
-		location ^~ /api/v1/videos/upload-resumable {
+		location = /api/v1/videos/upload-resumable {
 			client_max_body_size 0;
 			
 			proxy_request_buffering off;
