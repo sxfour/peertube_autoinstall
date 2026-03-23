@@ -330,9 +330,6 @@ server {
 
 
         location ^~ /api/v1/streaming {
-
-
-
             proxy_pass http://localhost:1935;
 
             proxy_buffering off;
@@ -340,32 +337,14 @@ server {
             proxy_redirect off;
 
         }
-		
+
+
 		
 		location = /api/v1/videos/upload-resumable {
     		client_max_body_size    0;
+			
 		    proxy_request_buffering off;
-
-    		try_files /dev/null @api;
-  		}
-
-  		location = /api/v1/videos/upload {
-    		limit_except POST HEAD { deny all; }
-
-		    # This is the maximum upload size, which roughly matches the maximum size of a video file.
-		    # Note that temporary space is needed equal to the total size of all concurrent uploads.
-		    # This data gets stored in /var/lib/nginx by default, so you may want to put this directory
-		    # on a dedicated filesystem.
-		    client_max_body_size                      12G; # default is 1M
-		    add_header            X-File-Maximum-Size 8G always; # inform backend of the set value in bytes before mime-encoding (x * 1.4 >= client_max_body_size)
-		
-		    try_files /dev/null @api;
-  		}
-
-  		location ~ ^/api/v1/(videos|video-playlists|video-channels|users/me) {
-    		client_max_body_size                      6M; # default is 1M
-    		add_header            X-File-Maximum-Size 4M always; # inform backend of the set value in bytes before mime-encoding (x * 1.4 >= client_max_body_size)
-
+			
     		try_files /dev/null @api;
   		}
 }
