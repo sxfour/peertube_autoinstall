@@ -328,24 +328,12 @@ server {
         }
 
 
-
-        location ^~ /api/v1/streaming {
-            proxy_pass http://localhost:1935;
-
-            proxy_buffering off;
-
-            proxy_redirect off;
-
-        }
-
-
-		
 		location = /api/v1/videos/upload-resumable {
+		
     		client_max_body_size    0;
 			
 		    proxy_request_buffering off;
 			
-    		try_files /dev/null @api;
   		}
 }
 nginx_content
