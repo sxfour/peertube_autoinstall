@@ -1,10 +1,13 @@
 1. SSH into the machine and assume root privileges.
-2. Clone and navigate to a directory: `git clone https://github.com/sxfour/peertube_autoinstall && cd peertube_autoinstall`.
-3. Run the following command to start the script.
+2. Clone and navigate to a directory:
+   ```bash
+    git clone https://github.com/sxfour/peertube_autoinstall && cd peertube_autoinstall
+    ```
+4. Run the following command to start the script.
     ```bash
     sudo chmod +x auto_script.sh && ./auto_script.sh
     ```
-4. Input the requested details as per the following table.
+5. Input the requested details as per the following table.
     | Name | Description | Mandatory | Optional | Default Value | 
     |------|---------|-----------|----------|---------------|
     | `admin_email`|Admin Email| &checkmark; | &#10006;| &#10006; | 
@@ -20,5 +23,5 @@
     |`port` | SSH port | &checkmark;| &#10006;| &#10006;|
 
                                 
-5. Accept terms of service as prompted.
-6. Follow further on-screen instructions to complete the setup.
+6. Accept terms of service as prompted.
+7. Follow further on-screen instructions to complete the setup.
