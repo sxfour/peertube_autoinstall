@@ -231,8 +231,11 @@ PEERTUBE_DB_PASSWORD=${db_password}
 PEERTUBE_DB_SSL=false
 PEERTUBE_DB_HOSTNAME=postgres
 PEERTUBE_WEBSERVER_HOSTNAME=${domain_name}
+
+# Если нужно запустить сервер по HTTPS меняем параметр и удаляем 80 порт, чтобы срабатывал стандарт для HTTPS: 443.
 PEERTUBE_WEBSERVER_HTTPS=false
 PEERTUBE_WEBSERVER_PORT=80
+
 PEERTUBE_TRUST_PROXY=["127.0.0.1", "loopback", "172.18.0.0/16"]
 PEERTUBE_SECRET=${secret_key}
 PEERTUBE_SMTP_USERNAME=${smtp_user}
@@ -277,8 +280,6 @@ server {
 
     server_name ${domain_name};
 
-
-
     proxy_set_header Host \$host;
 
     proxy_set_header X-Real-IP \$remote_addr;
@@ -294,9 +295,9 @@ server {
     proxy_set_header Upgrade \$http_upgrade;
 
     proxy_set_header Connection "upgrade";
-	
-	client_max_body_size 5000M;
 
+	# Без указания размера клиента не будет работать загрузка видео, можно указать в локальный путь.
+	client_max_body_size 5000M;
 
 
         location / {
@@ -304,8 +305,6 @@ server {
             proxy_pass http://localhost:9000;
 
             proxy_pass_header Server;
-
-
 
             proxy_buffering on;
 
