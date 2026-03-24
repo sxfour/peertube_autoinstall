@@ -25,3 +25,4 @@
                                 
 6. Accept terms of service as prompted.
 7. Follow further on-screen instructions to complete the setup.
+<img width="1864" height="839" alt="image" src="https://github.com/user-attachments/assets/01b8d93b-dbae-4ee4-98fe-058918a67ebd" />
