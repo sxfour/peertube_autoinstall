@@ -1,4 +1,4 @@
-1. SSH into the machine and assume root privileges.
+1. Req: Ubuntu 20.04 / SSH into the machine and assume root privileges.
 2. Clone and navigate to a directory:
    ```bash
     git clone https://github.com/sxfour/peertube_autoinstall && cd peertube_autoinstall
