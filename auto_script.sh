@@ -1,27 +1,10 @@
 #!/bin/bash
-# Display the script header, providing basic information about the script.
-echo "######################################################################"
-echo "#                                                                    #"
-echo "#            Peertube Installation and Hardening Script              #"
-echo "#                                                                    #"
-echo "#              Created by Honeytree Technologies, LLC                #"
-echo "#                        www.honeytreetech.com                       #"
-echo "#                                                                    #"
-echo "#                    Mastodon: honeytree.social                      #"
-echo "#                    Email: info@honeytreetech.com                   #"
-echo "#                                                                    #"
-echo "######################################################################"
-
-# Pause the script for 3 seconds to allow the user to read the header
-sleep 3
-
-# Display more detailed information about what each option does
 echo "########################################################################"
-echo "##### THIS IS IMPORTANT, PLEASE READ CAREFULLY BEFORE SELECTING    #####"
+echo "#####                Автоустановщик PeerTube 				         #####"
 echo "#####                                                              #####"
-echo "#####  This will install Peertube on fresh server.                 #####"
+echo "#####  Для использования HTTPS измените настройки докера в  файле  #####"
 echo "#####                                                              #####"
-echo "##### Installing on an operating Peertube server will wipe data.   #####"
+echo "##### Базовая настройка будет работать на HTTP в тестовом режиме   #####"
 echo "#####                                                              #####"
 echo "########################################################################"
 
