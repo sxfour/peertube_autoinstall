@@ -25,3 +25,4 @@
                                 
 6. Accept terms of service as prompted.
 7. Follow further on-screen instructions to complete the setup.
+8. Пожалуйста перед тем как исполнять код просмотрите все комментарии.
