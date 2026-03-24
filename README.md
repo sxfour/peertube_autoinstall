@@ -1,6 +1,5 @@
 1. SSH into the machine and assume root privileges.
-2. Create and navigate to a directory: `mkdir auto_script && cd auto_script`.
-    You can also use own directory.
+2. Clone and navigate to a directory: `git clone https://github.com/sxfour/peertube_autoinstall && cd peertube_autoinstall`.
 3. Run the following command to start the script.
     ```bash
     sudo chmod +x auto_script.sh && ./auto_script.sh
